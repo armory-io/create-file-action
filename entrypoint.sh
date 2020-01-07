@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [[ -z "${FILE_NAME}" ]]; then
-  DIR=$(dirname $FILE_NAME)
+if [[ ! -z "${FILE_NAME}" ]]; then
+  DIR=`dirname $FILE_NAME`
   mkdir -p $DIR
 else
   echo "No file parameter set... exiting..."
