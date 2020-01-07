@@ -15,3 +15,5 @@ else
   echo "Using INPUT_FILE_BASE64 to write to $INPUT_FILE_NAME"
   echo $INPUT_FILE_BASE64 | base64 --decode > $INPUT_FILE_NAME
 fi
+# When run as docker, it's not immediately accessible 
+chmod 644 $INPUT_FILE_NAME
